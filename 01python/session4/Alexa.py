@@ -48,13 +48,20 @@ class voice_assistant:
     '''
     webbrowser.open_new_tab("https://mail.google.com/mail/u/0/#inbox")
     sleep(4)
-    pyautogui.moveTo(200, 200, duration=1)
-    pyautogui.click()
-    pyautogui.moveTo(225, 225, duration=0.2)
-    pyautogui.click()
-          
+    locaion = None
+    while locaion==None:
+        try:
+          locaion = pyautogui.locateOnScreen('Screenshot 2024-06-29 001840.png')
+          sleep(1)
+        except pyautogui.ImageNotFoundException:
+          print("Image Not found")
+          exit()
 
+    pyautogui.click(locaion.left+10,locaion.top+10,duration=0.4)
+    pyautogui.click(locaion.left+35,locaion.top+35,duration=0.3)
 
+  
+  
 # Alexa talk
 mytext = 'Hello, what do you need?'
 language = 'en'
