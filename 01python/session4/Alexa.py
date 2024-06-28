@@ -7,7 +7,6 @@ Features added till now:
 
 import speech_recognition as sr
 import webbrowser
-import pyttsx3
 from gtts import gTTS
 import pygame
 import pyautogui
@@ -16,7 +15,6 @@ from time import sleep
 class voice_assistant:
   # Initialize recognizer
   recognizer = sr.Recognizer()
-  engine = pyttsx3.init()
 
   def record_audio(self):
     """
