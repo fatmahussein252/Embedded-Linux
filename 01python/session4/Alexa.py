@@ -51,7 +51,7 @@ class voice_assistant:
     locaion = None
     while locaion==None:
         try:
-          locaion = pyautogui.locateOnScreen('Screenshot 2024-06-29 001840.png')
+          locaion = pyautogui.locateOnScreen('session4\Screenshot 2024-06-29 001840.png')
           sleep(1)
         except pyautogui.ImageNotFoundException:
           print("Image Not found")
