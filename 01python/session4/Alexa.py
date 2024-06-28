@@ -1,6 +1,7 @@
 '''
 Initial Documentation:
 Features added till now:
+- Alexa talk
 - Open webbrowsers (google and facbook): when "speak.." appears on the terminal, say "open google" or "open facebook".
 - Mark unread emails as read: when "speak.." appears on the terminal, say "read emails".
 '''
