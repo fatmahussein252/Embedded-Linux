@@ -1,8 +1,14 @@
+'''
+Initial Documentation:
+Features added till now:
+- Open webbrowsers (google and facbook): when "speak.." appears on the terminal, say "open google" or "open facebook".
+- Mark unread emails as read: when "speak.." appears on the terminal, say "read emails".
+'''
+
 import speech_recognition as sr
 import webbrowser
 import pyttsx3
 from gtts import gTTS
-import os
 import pygame
 import pyautogui
 from time import sleep
@@ -37,6 +43,9 @@ class voice_assistant:
       print("Could not request results from Google Speech Recognition service")
   
   def Auto_gui(self):
+    '''
+    Marks unread emails to read
+    '''
     webbrowser.open_new_tab("https://mail.google.com/mail/u/0/#inbox")
     sleep(4)
     pyautogui.moveTo(200, 200, duration=1)
@@ -50,10 +59,10 @@ class voice_assistant:
 mytext = 'Hello, what do you need?'
 language = 'en'
 myobj = gTTS(text=mytext, lang=language, slow=False)
-myobj.save("session4/output.mp3")
+myobj.save("session4\output.mp3")
 pygame.init()
 pygame.mixer.init()
-sound = pygame.mixer.Sound("session4/output.mp3")
+sound = pygame.mixer.Sound("session4\output.mp3")
 sound.play()
 while pygame.mixer.get_busy():
     pygame.time.wait(100)  # Wait 100 milliseconds
